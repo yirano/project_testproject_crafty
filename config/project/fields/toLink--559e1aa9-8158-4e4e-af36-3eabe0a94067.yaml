@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: ea6a5c42-dd3e-43b1-948a-756d6ee55796
+handle: toLink
+instructions: ''
+name: ToLink
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: 'http://pretend-company.test'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

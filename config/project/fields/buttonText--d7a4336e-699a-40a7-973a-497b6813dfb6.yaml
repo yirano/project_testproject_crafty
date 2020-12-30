@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: e6b847f1-7416-4941-b34d-6b0d84031ffa
+handle: buttonText
+instructions: ''
+name: 'Button Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Button Text'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

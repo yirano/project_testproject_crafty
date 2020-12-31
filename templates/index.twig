@@ -121,13 +121,14 @@
                             <a href="#">Get directions</a> to our office.
                         </p>
                     </address>
+
                     <div class="socialMedia">
-                       <a href={{entry.facebook}}><img src="./images/facebook.svg" alt="Facebook Link" /></a>
-
-                       <a href={{entry.twitter}}><img src="./images/twitter.svg" alt="Twitter Link" /></a>
-
-                       <a href={{entry.youtube}}><img src="./images/youtube.svg" alt="YouTube Link" /></a>
+                        {% for item in craft.assets().volume('socialMedia').kind('image').all() | reverse %}
+                            <a href={{item.toLink}}>
+                                <img src="{{item.getUrl()}}" alt={{item.title}}></a>
+                        {% endfor %}
                     </div>
+
                 </div>
             </div>
             <div class="copyright">

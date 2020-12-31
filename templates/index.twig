@@ -28,11 +28,9 @@
         </div>
         <div class="menu">
             <div class="menuLinks">
-                <a href="#">Expertise</a>
-                <a href="#">Events</a>
-                <a href="#">About Us</a>
-                <a href="#">Connect</a>
-                <a href="#">Customer Stories</a>
+                {% for link in craft.entries.section('navigation').limit(5).all() %}
+                    <a href={{link.toLink}}>{{link.title}}</a>
+                {% endfor %}
             </div>
             <div class="menuActions">
                 <a href="#">
@@ -45,7 +43,6 @@
 
     <div class="cta">
         <div class="ctaMessage">
-            {# <h1>Creating Clear Direction, Intuitive Processes, <span>and Engaged Teams.</span></h1> #}
             <h1>{{ entry.callToAction }}
         </div>
         <div class="ctaLinks">

@@ -51,18 +51,19 @@
 
     <div class="cta">
         <div class="ctaMessage">
-        {% set ctaMessage = entry.callToAction | replace(',', ',,') | split(', ')  %}
-        {% for msg in ctaMessage %}
-            <h1>
-            {% if loop.last == false %}
-                {{msg}}<br />
-            {% elseif loop.last == true %}
-                <span>{{msg}}</span>
-            {% endif %}
-            </h1>
-        {% endfor %}
-        
+            {% set ctaMessage = entry.callToAction | replace(',', ',,') | split(', ')  %}
+            {% for msg in ctaMessage %}
+                <h1>
+                {# This if/else condition allows the last line separated by the last comma to be styled differently #}
+                {% if loop.last == false %}
+                    {{msg}}<br />
+                {% elseif loop.last == true %}
+                    <span>{{msg}}</span>
+                {% endif %}
+                </h1>
+            {% endfor %}
         </div>
+
         <div class="ctaLinks">
             <a href={{ entry.toLink }}>
                 <button>{{ entry.buttonText }}</button>

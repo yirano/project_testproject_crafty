@@ -80,8 +80,93 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Content
+        name: Header
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: dd43914b-04e2-4bed-88d6-4ea21277f748
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dd08d8b7-bf09-4d9f-bd5d-090a5173b859
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1e41fc79-8744-4095-8057-e6371d3bed54
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bea90a85-c4b6-4b58-8c75-910b45fa5bcc
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 933e1ee8-db7c-4e36-b5ef-c5d4cd4aa585
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b17507db-0128-43cf-a668-0ebec7f24825
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 408f9703-adf7-4bc9-b3d9-136a4f489dda
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0cf2c5e1-1b66-44fa-86b4-994463076fae
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dd8a6cdd-a99e-4b6c-a253-c85b5555774e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Footer
+        sortOrder: 2
 handle: home
 hasTitleField: true
 name: Home

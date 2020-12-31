@@ -1,0 +1,83 @@
+fieldLayouts:
+  ca57dbb9-86e4-42a8-8b9e-204c01d1f997:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: ''
+            label: __blank__
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4245d95e-df3c-49f2-9860-eca28277d905
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 625f1125-c8ea-4045-897d-6bb93cbec6d0
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9c154459-3dbd-4eb1-8fe6-6e81ead88699
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d7a4336e-699a-40a7-973a-497b6813dfb6
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 559e1aa9-8158-4e4e-af36-3eabe0a94067
+            instructions: ''
+            label: 'Button Link'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: services
+hasTitleField: false
+name: Services
+section: b1ee6eaf-075c-41f7-815f-58dca00af88a
+sortOrder: 1
+titleFormat: '{myCustomField}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

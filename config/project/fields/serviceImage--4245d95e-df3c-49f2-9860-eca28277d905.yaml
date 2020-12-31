@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 15af0e62-9039-4df3-96ca-fd86c57b5595
+handle: serviceImage
+instructions: 'Add an image for your service'
+name: 'Service Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:73e03827-a77e-4ab1-9e96-33a481a82dd9'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:73e03827-a77e-4ab1-9e96-33a481a82dd9'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:73e03827-a77e-4ab1-9e96-33a481a82dd9'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -25,7 +25,7 @@
 
                         <h4>{{[companyName[0], companyName[1]]|join(' ')}}</h4>
                         <p>{{[companyName[2], companyName[3]]|join(' ')}}</p>
-                        
+
                     </div>
                 </div>
             </a>
@@ -51,7 +51,17 @@
 
     <div class="cta">
         <div class="ctaMessage">
-            <h1>{{ entry.callToAction }}
+        {% set ctaMessage = entry.callToAction | replace(',', ',,') | split(', ')  %}
+        {% for msg in ctaMessage %}
+            <h1>
+            {% if loop.last == false %}
+                {{msg}}<br />
+            {% elseif loop.last == true %}
+                <span>{{msg}}</span>
+            {% endif %}
+            </h1>
+        {% endfor %}
+        
         </div>
         <div class="ctaLinks">
             <a href={{ entry.toLink }}>

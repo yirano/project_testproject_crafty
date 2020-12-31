@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: submenu
+name: SubMenu
+propagationMethod: all
+siteSettings:
+  7846378f-4dcb-46ac-9b76-c9997e2dd3bc:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: fc1bca4c-f5c6-4d04-95c3-f0611ef143df
+type: structure

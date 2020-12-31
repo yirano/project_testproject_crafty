@@ -78,9 +78,9 @@
             <p>How can we help?</p>
         </div>
         <div class="subMenuLinks showSubMenu">
-            <a href="#">I own a business.</a>
-            <a href="#">I mange or work on a team.</a>
-            <a href="#">I'm here to learn.</a>
+            {% for item in craft.entries.section('submenu') %}
+                <a href={{item.subMenuLink}}>{{item.title}}</a>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -121,22 +121,27 @@
                             <a href="#">Get directions</a> to our office.
                         </p>
                     </address>
+
                     <div class="socialMedia">
-                       <a href={{entry.facebook}}><img src="./images/facebook.svg" alt="Facebook Link" /></a>
-
-                       <a href={{entry.twitter}}><img src="./images/twitter.svg" alt="Twitter Link" /></a>
-
-                       <a href={{entry.youtube}}><img src="./images/youtube.svg" alt="YouTube Link" /></a>
+                        {% for item in craft.assets().volume('socialMedia').kind('image').all() | reverse %}
+                            <a href={{item.toLink}}>
+                                <img src="{{item.getUrl()}}" alt={{item.title}}></a>
+                        {% endfor %}
                     </div>
+
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; {{entry.companyName}}. All Rights Reserved.</p>
 
-                <p><a href={{entry.privacyPolicy}}>Privacy Policy</a></p>
-                <p><a href={{entry.termsAndConditions}}>Terms &amp; Conditions</a></p>
-                <p><a href={{entry.careers}}>Careers</a></p>
-                <p>Website crafted by <a href="#">Mostly Serious</a></p>
+                {% for item in craft.entries.section('footer') %}
+                    {% if loop.first == true %}
+                        <p>&copy; {{item.title}} All Rights Reserved.</p>
+                    {% elseif loop.last == true %}
+                        <p>Website crafted by <a href={{item.toLink}}>{{item.title}}</a></p>
+                    {% else %}
+                        <p><a href={{item.toLink}}>{{item.title}}</a></p>
+                    {% endif %}
+                {% endfor %}
             </div>
 
         </footer>

@@ -1,0 +1,47 @@
+fieldLayouts:
+  8b534be5-2996-4c47-a344-6ddd5bd81862:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: ''
+            label: 'Sub Menu Text'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9c9d510d-caa1-43f4-a61b-f5b8646a4680
+            instructions: ''
+            label: 'Sub Menu Link'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: submenu
+hasTitleField: true
+name: SubMenu
+section: 7266d8af-d2eb-4e11-81b3-b0cd891c1c9a
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

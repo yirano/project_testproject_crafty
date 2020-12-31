@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: footer
+name: Footer
+propagationMethod: all
+siteSettings:
+  7846378f-4dcb-46ac-9b76-c9997e2dd3bc:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 0461fb91-f1a1-4d96-b37b-16ac89a0ed7c
+type: structure

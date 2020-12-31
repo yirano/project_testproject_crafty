@@ -306,6 +306,7 @@ img {
 }
 .header .nav .logoMenuIcon .logoContainer .logo .companyName {
 	margin-left: 0.3rem;
+	margin-top: 3px;
 	padding: 1rem;
 	letter-spacing: 0.07rem;
 	font-weight: 300;

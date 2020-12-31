@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="referrer" content="origin-when-cross-origin" />
     <link rel="stylesheet" href="./index.css" />
+    <script src="https://use.fontawesome.com/39c07960be.js"></script>
 </head>
 <body>
 <div class="app">
@@ -16,6 +17,7 @@
             <a href="#" class="logoContainer">
                 <div class="logo">
                     <div class="companyName">
+                        <i class="fab fa-pied-piper-square fa-lg"></i>
                         <h4>Pretend Company</h4>
                         <p>Consulting Group</p>
                     </div>
@@ -43,12 +45,13 @@
     <div class="cta">
         <div class="ctaMessage">
             {# <h1>Creating Clear Direction, Intuitive Processes, <span>and Engaged Teams.</span></h1> #}
+            <h1>{{ entry.callToAction }}
         </div>
         <div class="ctaLinks">
-            <a href="#">
-                <button>Get to know us</button>
+            <a href={{ entry.toLink }}>
+                <button>{{ entry.buttonText }}</button>
             </a>
-            <p>Ready to get started? <a href="#">Contact us today.</a></p>
+            <p>{{ entry.callToActionSubMsg }} <a href={{ entry.contactUsLink }}>{{entry.contactUsMessage}}</a></p>
         </div>
     </div>
 

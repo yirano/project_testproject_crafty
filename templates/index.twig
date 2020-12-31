@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Pretend Company</title>
+    <title>{{entry.companyName}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="referrer" content="origin-when-cross-origin" />
 <script src="https://kit.fontawesome.com/17c05eded0.js" crossorigin="anonymous"></script>
@@ -14,27 +14,35 @@
 <div class="app">
 <div class="header">
     <div class="nav">
+
         <div class="logoMenuIcon">
             <a href="#" class="logoContainer">
                 <div class="logo">
                     <i class="fab fa-xing-square fa-4x" ></i>
+
                     <div class="companyName">
-                        <h4>Pretend Company</h4>
-                        <p>Consulting Group</p>
+                    {% set companyName = entry.companyName|split(' ') %}
+
+                        <h4>{{[companyName[0], companyName[1]]|join(' ')}}</h4>
+                        <p>{{[companyName[2], companyName[3]]|join(' ')}}</p>
+                        
                     </div>
                 </div>
             </a>
             <div class="menuIcon">Menu</div>
         </div>
+
         <div class="menu">
             <div class="menuLinks">
                 {% for link in craft.entries.section('navigation').limit(5).all() %}
                     <a href={{link.toLink}}>{{link.title}}</a>
                 {% endfor %}
             </div>
+            
+            {% set navButton = craft.entries.section('navigation').last() %}
             <div class="menuActions">
-                <a href="#">
-                    <button>Get to know us</button>
+                <a href={{navButton.toLink}}>
+                    <button>{{navButton}}</button>
                 </a>
                 <Search />
             </div>

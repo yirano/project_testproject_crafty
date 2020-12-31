@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: ea6a5c42-dd3e-43b1-948a-756d6ee55796
+handle: callToAction
+instructions: 'Enter a call to action message'
+name: 'Call to Action'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Creating clear direction, Intuitive Processes, and Engaged Teams.'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

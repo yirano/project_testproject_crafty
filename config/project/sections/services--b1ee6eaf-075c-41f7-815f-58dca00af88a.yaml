@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: services
+name: Services
+propagationMethod: all
+siteSettings:
+  7846378f-4dcb-46ac-9b76-c9997e2dd3bc:
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: 'services/{slug}'
+structure:
+  maxLevels: null
+  uid: c8cbe2e6-34d7-4ac2-8a6c-2789c54f1f6e
+type: structure

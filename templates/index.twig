@@ -1,4 +1,5 @@
-{% extends "./_layouts/main" %}
+{% extends "_layouts/main" %}
+    
     {% block main %}
     <div class="cta">
         <div class="ctaMessage">
@@ -34,8 +35,7 @@
             {% endfor %}
         </div>
     </div>
-</div>
-
+    </div>
     <div class="mainContent">
 
         {% for service in craft.entries.section('services').limit(3).all() %}
@@ -54,7 +54,6 @@
             </div>
 
         {% endfor %}
-
-        </div>
-       
+    </div>
 {% endblock %}
+        

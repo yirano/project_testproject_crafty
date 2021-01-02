@@ -11,88 +11,87 @@
 
 </head>
 <body>
-<div class="app">
-<div class="header">
-    <div class="nav">
+    <div class="app">
+        <div class="header">
 
-        <div class="logoMenuIcon">
-            <a href="#" class="logoContainer">
-                <div class="logo">
-                    <i class="fab fa-xing-square fa-4x" ></i>
+            <div class="nav">
+                <div class="logoMenuIcon">
+                    <a href="#" class="logoContainer">
+                        <div class="logo">
+                            <i class="fab fa-xing-square fa-4x" ></i>
 
-                    <div class="companyName">
-                    {% set companyName = entry.companyName|split(' ') %}
+                            <div class="companyName">
+                            {% set companyName = entry.companyName|split(' ') %}
 
-                        <h4>{{[companyName[0], companyName[1]]|join(' ')}}</h4>
-                        <p>{{[companyName[2], companyName[3]]|join(' ')}}</p>
+                                <h4>{{[companyName[0], companyName[1]]|join(' ')}}</h4>
+                                <p>{{[companyName[2], companyName[3]]|join(' ')}}</p>
 
+                            </div>
+                        </div>
+                    </a>
+                    <div class="menuIcon">Menu</div>
+                </div>
+
+            <div class="menu">
+                <div class="menuLinks">
+                    {% for link in craft.entries.section('navigation').limit(5).all() %}
+                        <a href={{link.toLink}}>{{link.title}}</a>
+                    {% endfor %}
+                </div>
+                
+                {% set navButton = craft.entries.section('navigation').last() %}
+                <div class="menuActions">
+                    <a href={{navButton.toLink}}>
+                        <button>{{navButton}}</button>
+                    </a>
+                    <Search />
+                </div>
+            </div>
+
+        </div>
+    {% block main %}
+
+    {% endblock %}
+
+        <footer>
+            <div class="contact">
+                <div class="phoneEmail">
+                    <h1>{{entry.phoneNumber}}</h1>
+                    <p>Or send us an email using our <a href="#">contact form</a>.</p>
+                </div>
+                <div class="spacer"></div>
+                <div class="addressSocial">
+                    <address>
+                        <div>
+                            <h4>{{entry.address}}</h4>
+                        </div>
+                        <p>
+                            <a href="#">Get directions</a> to our office.
+                        </p>
+                    </address>
+
+                    <div class="socialMedia">
+                        {% for item in craft.assets().volume('socialMedia').kind('image').all() | reverse %}
+                            <a href={{item.toLink}}>
+                                <img src="{{item.getUrl()}}" alt={{item.title}}></a>
+                        {% endfor %}
                     </div>
-                </div>
-            </a>
-            <div class="menuIcon">Menu</div>
-        </div>
 
-        <div class="menu">
-            <div class="menuLinks">
-                {% for link in craft.entries.section('navigation').limit(5).all() %}
-                    <a href={{link.toLink}}>{{link.title}}</a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                {% for item in craft.entries.section('footer') %}
+                    {% if loop.first == true %}
+                        <p>&copy; {{item.title}} All Rights Reserved.</p>
+                    {% elseif loop.last == true %}
+                        <p>Website crafted by <a href={{item.toLink}}>{{item.title}}</a></p>
+                    {% else %}
+                        <p><a href={{item.toLink}}>{{item.title}}</a></p>
+                    {% endif %}
                 {% endfor %}
             </div>
-            
-            {% set navButton = craft.entries.section('navigation').last() %}
-            <div class="menuActions">
-                <a href={{navButton.toLink}}>
-                    <button>{{navButton}}</button>
-                </a>
-                <Search />
-            </div>
+        </footer>
         </div>
-    </div>
-
-{% block main %}
-
-{% endblock %}
-
- <footer>
-    <div class="contact">
-        <div class="phoneEmail">
-            <h1>{{entry.phoneNumber}}</h1>
-            <p>Or send us an email using our <a href="#">contact form</a>.</p>
-        </div>
-        <div class="spacer"></div>
-        <div class="addressSocial">
-            <address>
-                <div>
-                    <h4>{{entry.address}}</h4>
-                </div>
-                <p>
-                    <a href="#">Get directions</a> to our office.
-                </p>
-            </address>
-
-            <div class="socialMedia">
-                {% for item in craft.assets().volume('socialMedia').kind('image').all() | reverse %}
-                    <a href={{item.toLink}}>
-                        <img src="{{item.getUrl()}}" alt={{item.title}}></a>
-                {% endfor %}
-            </div>
-
-        </div>
-    </div>
-    <div class="copyright">
-
-        {% for item in craft.entries.section('footer') %}
-            {% if loop.first == true %}
-                <p>&copy; {{item.title}} All Rights Reserved.</p>
-            {% elseif loop.last == true %}
-                <p>Website crafted by <a href={{item.toLink}}>{{item.title}}</a></p>
-            {% else %}
-                <p><a href={{item.toLink}}>{{item.title}}</a></p>
-            {% endif %}
-        {% endfor %}
-    </div>
-</footer>
-        </div>
-
     </body>
 </html>

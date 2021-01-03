@@ -29,9 +29,10 @@
                     </div>
                 </div>
             </a>
+
+            {# Animates the menuIcon #}
             {% js %}
                 const handleClick = () => {
-                    {# console.log("clicked") #}
                     const menuIcon = document.querySelectorAll('.menuIcon span')
                     
                     const menu = document.querySelector('.menu')
@@ -42,6 +43,7 @@
                     })
                 }
             {% endjs %}
+
             <div class="menuIcon" onclick="handleClick()">
                 <span></span>
                 <span></span>
@@ -61,7 +63,8 @@
                 <a href={{navButton.toLink}}>
                     <button>{{navButton}}</button>
                 </a>
-
+                
+                {# Animates the searchbar #}
                 {% js %}
 
                     const toggleSearch = () => {
@@ -72,6 +75,7 @@
 
                 {% endjs %}
 
+                {# The stylesheet wouldn't refresh changes so I added a css for specific changes here #}
                 {% css %}
                     .searchIcon {
                         line-height: 2.3em ;

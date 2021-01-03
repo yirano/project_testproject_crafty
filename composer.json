@@ -2,7 +2,9 @@
   "require": {
     "craftcms/cms": "^3.5.10",
     "craftcms/redactor": "2.8.5",
-    "vlucas/phpdotenv": "^3.4.0"
+    "nystudio107/craft-minify": "1.2.10",
+    "vlucas/phpdotenv": "^3.4.0",
+    "wbrowar/adminbar": "3.1.11"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"

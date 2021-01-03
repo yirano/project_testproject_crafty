@@ -24,12 +24,31 @@
         </div>
     </div>
 
-    <div class="subMenu">
+    {% js %}
+        const subMenu = document.querySelector('.subMenuLinks')
+
+        const handleSubMenu = () => {
+            subMenu.classList.toggle('hideSubMenu')
+            subMenu.classList.toggle('showSubMenu')
+        }
+    {% endjs %}
+
+    {% css %}
+        .subMenu {
+            padding: 0.5rem 0;
+        }
+
+        .subMenuIcon {
+            margin-right: 10px;
+        }
+    {% endcss %}
+
+    <div class="subMenu" onclick="handleSubMenu()">
         <div class="subMenuPrompt">
-            <i class="fas fa-user-circle fa-3x"></i>
+            <i class="fas fa-user-circle fa-3x subMenuIcon" ></i>
             <p>How can we help?</p>
         </div>
-        <div class="subMenuLinks showSubMenu">
+        <div class="subMenuLinks hideSubMenu">
             {% for item in craft.entries.section('submenu') %}
                 <a href={{item.subMenuLink}}>{{item.title}}</a>
             {% endfor %}

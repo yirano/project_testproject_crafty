@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang={{ craft.app.language }}>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
     <title>{{entry.companyName}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="referrer" content="origin-when-cross-origin" />
-<script src="https://kit.fontawesome.com/17c05eded0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./index.css" />
+    <script src="https://kit.fontawesome.com/17c05eded0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css" />
 
 </head>
 <body>
@@ -18,7 +18,7 @@
         <div class="logoMenuIcon">
             <a href="#" class="logoContainer">
                 <div class="logo">
-                    <i class="fab fa-xing-square fa-4x" ></i>
+                    <i class="fab fa-xing-square fa-4x"></i>
 
                     <div class="companyName">
                     {% set companyName = entry.companyName|split(' ') %}
@@ -29,7 +29,24 @@
                     </div>
                 </div>
             </a>
-            <div class="menuIcon">Menu</div>
+            {% js %}
+                const handleClick = () => {
+                    {# console.log("clicked") #}
+                    const menuIcon = document.querySelectorAll('.menuIcon span')
+                    
+                    const menu = document.querySelector('.menu')
+
+                    menu.classList.toggle('showMenu')
+                    menuIcon.forEach((icon)=> {
+                        icon.classList.toggle('mIconAnimate')
+                    })
+                }
+            {% endjs %}
+            <div class="menuIcon" onclick="handleClick()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
 
         <div class="menu">
@@ -44,7 +61,34 @@
                 <a href={{navButton.toLink}}>
                     <button>{{navButton}}</button>
                 </a>
-                <Search />
+
+                {% js %}
+
+                    const toggleSearch = () => {
+                        const search = document.querySelector('.navSearch')
+
+                        search.classList.toggle('openSearch')
+                    }
+
+                {% endjs %}
+
+                {% css %}
+                    .searchIcon {
+                        line-height: 2.3em ;
+                        margin-left: -34px ;
+                        z-index: 999;
+                        cursor: pointer;                        
+                    }
+
+                {% endcss %}
+
+                <form class="search" autoComplete="off" >
+                    <div class="toggleSearch">
+                        <input type="text" class="navSearch"  name="search" placeholder="Search" />
+
+                        <i class="fas fa-search fa-lg searchIcon" onclick="toggleSearch()" ></i>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

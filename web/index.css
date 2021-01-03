@@ -454,14 +454,15 @@ img {
 	margin: 1.3rem;
 	position: relative;
 }
-.header .nav .menu .menuActions .search svg {
+.header .nav .menu .menuActions .search .fa {
 	z-index: 999;
 	margin-left: -2.1rem;
 	margin-top: 0.8rem;
 }
-.header .nav .menu .menuActions .search svg:hover {
+.header .nav .menu .menuActions .search .fa:hover {
 	cursor: pointer;
 }
+
 .header .nav .menu .menuActions .search .toggleSearch {
 	display: flex;
 }

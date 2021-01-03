@@ -35,7 +35,8 @@
             {% endfor %}
         </div>
     </div>
-    </div>
+
+    </div> {# this closes out the header div -- I had combined the Call To Action to the header div, so it needs to be closed out here #}
     <div class="mainContent">
 
         {% for service in craft.entries.section('services').limit(3).all() %}
